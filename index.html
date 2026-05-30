@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dossiê Indígena</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+}
+
+.menu-btn{
+position:fixed;
+top:20px;
+left:20px;
+font-size:35px;
+cursor:pointer;
+z-index:1001;
+}
+
+.sidebar{
+position:fixed;
+left:-260px;
+top:0;
+width:250px;
+height:100%;
+background:#181818;
+padding-top:80px;
+transition:.4s;
+z-index:1000;
+}
+
+.sidebar.active{
+left:0;
+}
+
+.sidebar a{
+display:block;
+padding:18px;
+color:white;
+text-decoration:none;
+border-bottom:1px solid #333;
+}
+
+.sidebar a:hover{
+background:#2f7d32;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1500&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.3rem;
+max-width:700px;
+}
+
+.botao{
+margin-top:30px;
+padding:15px 30px;
+background:#2f7d32;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+section{
+padding:100px 10%;
+}
+
+section h2{
+font-size:2.5rem;
+margin-bottom:20px;
+color:#4caf50;
+}
+
+section p{
+font-size:1.1rem;
+line-height:1.8;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.galeria img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+}
+
+footer{
+background:#181818;
+padding:40px;
+text-align:center;
+margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="menu-btn" onclick="abrirMenu()">☰</div>
+
+<div class="sidebar" id="menu">
+<a href="#inicio">Início</a>
+<a href="#historia">História</a>
+<a href="#cultura">Cultura</a>
+<a href="#desafios">Desafios</a>
+<a href="#galeria">Galeria</a>
+</div>
+
+<section class="hero" id="inicio">
+<h1>Dossiê dos Povos Indígenas</h1>
+
+<p>
+Uma exposição virtual sobre a história, cultura,
+tradições e desafios enfrentados pelos povos indígenas
+no Brasil.
+</p>
+
+<a href="#historia" class="botao">
+Explorar
+</a>
+</section>
+
+<section id="historia">
+<h2>História</h2>
+
+<p>
+Os povos indígenas habitam o território brasileiro
+há milhares de anos. Antes da chegada dos europeus,
+existiam centenas de povos diferentes, com línguas,
+costumes e formas de organização próprias.
+</p>
+</section>
+
+<section id="cultura">
+<h2>Cultura</h2>
+
+<p>
+A diversidade cultural indígena é enorme.
+Cada povo possui tradições, danças, pinturas,
+artesanatos, conhecimentos sobre a natureza
+e formas únicas de transmitir saberes.
+</p>
+</section>
+
+<section id="desafios">
+<h2>Desafios Atuais</h2>
+
+<p>
+Atualmente muitos povos indígenas enfrentam
+problemas relacionados à invasão de terras,
+garimpo ilegal, desmatamento e preservação
+de suas culturas e idiomas.
+</p>
+</section>
+
+<section id="galeria">
+<h2>Galeria</h2>
+
+<div class="galeria">
+
+<img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80">
+
+</div>
+
+</section>
+
+<footer>
+<p>Dossiê Indígena • Projeto Escolar</p>
+</footer>
+
+<script>
+
+function abrirMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
+
+</body>
+</html>
